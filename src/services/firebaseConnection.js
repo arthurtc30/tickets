@@ -1,16 +1,17 @@
 import firebase from 'firebase/app';
-import 'firebase/auth';
 import 'firebase/firestore';
+import 'firebase/auth';
 
-let firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyDxwQpG2ZS0m8H5pQ92W-6fEjjvGP94yAM",
-    authDomain: "sistema-98d1c.firebaseapp.com",
-    projectId: "sistema-98d1c",
-    storageBucket: "sistema-98d1c.appspot.com",
-    messagingSenderId: "995118095071",
-    appId: "1:995118095071:web:a193deadfeb858ada4a76a",
-    measurementId: "G-PK1LX99KQE"
+    authDomain: "sistema-fbcf9.firebaseapp.com",
+    projectId: "sistema-fbcf9",
+    storageBucket: "sistema-fbcf9.appspot.com",
+    messagingSenderId: "1053148262498",
+    appId: "1:1053148262498:web:53502d2c404153612d613b",
+    measurementId: "G-S2MQ663TKX"
 };
+
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
