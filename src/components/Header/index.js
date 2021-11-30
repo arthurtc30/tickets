@@ -17,17 +17,17 @@ export default function Header() {
 
             <Link to='/dashboard'>
                 <FiHome color="#FFF" size={24} />
-                Chamados
+                Tickets
             </Link>
 
-            <Link to='/dashboard'> {/* alterar */}
+            <Link to='/customers'>
                 <FiUser color="#FFF" size={24} />
-                Clientes
+                Customers
             </Link>
 
-            <Link to='/dashboard'> {/* alterar */}
+            <Link to='/profile'>
                 <FiSettings color="#FFF" size={24} />
-                Configurações
+                Settings
             </Link>
         </div>
     )
