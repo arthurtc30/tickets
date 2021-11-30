@@ -1,14 +1,22 @@
-import "./signin.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../contexts/auth";
+
 import logo from "../../assets/logo.png";
+import "./signin.css";
 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { signIn } = useContext(AuthContext);
+
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (email !== '' && password !== '') {
+      signIn(email, password);
+    }
   }
 
   return (
