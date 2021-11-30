@@ -8,7 +8,17 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-      <ToastContainer autoClose={2000} />
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={true}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
         <RouteWrapper />
       </BrowserRouter>
     </AuthProvider>
