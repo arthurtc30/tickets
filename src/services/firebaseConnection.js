@@ -1,8 +1,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
+import 'firebase/firestore';
 
 let firebaseConfig = {
-    apiKey: "AIzaSyC2RGcipfqIVNnqoQF05CadLKO4e4bgVWc",
+    apiKey: "AIzaSyDxwQpG2ZS0m8H5pQ92W-6fEjjvGP94yAM",
     authDomain: "sistema-98d1c.firebaseapp.com",
     projectId: "sistema-98d1c",
     storageBucket: "sistema-98d1c.appspot.com",
