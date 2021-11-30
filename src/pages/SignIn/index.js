@@ -15,17 +15,17 @@ function SignIn() {
     <div className="container-center">
       <div className="login">
         <div className="logo-area">
-          <img src={logo} alt="Sistema Logo" />
+          <img src={logo} alt="System Logo" />
         </div>
 
         <form onSubmit={handleSubmit}>
-          <h1>Entrar</h1>
+          <h1>Sign In</h1>
           <input type="text" placeholder="email@email.com" value={email} onChange={(e) => setEmail(e.target.value)} />
           <input type="password" placeholder="******" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <button type="submit">Acessar</button>
+          <button type="submit">Access</button>
         </form>
 
-        <Link to="/register">Criar uma conta</Link>
+        <Link to="/register">Create account</Link>
       </div>
     </div>
   );
