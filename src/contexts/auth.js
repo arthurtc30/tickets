@@ -103,6 +103,7 @@ function AuthProvider({ children }) {
                 user,
                 loading,
                 signUp,
+                signIn,
                 signOut
             }} >
             {children}
