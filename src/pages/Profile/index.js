@@ -136,7 +136,6 @@ export default function Profile() {
                 <div className="container">
                     <button className="logout-btn" onClick={() => signOut()} >
                             Sign Out
-
                     </button>
                 </div>
             </div>
