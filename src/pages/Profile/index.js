@@ -7,7 +7,6 @@ import { FiSettings, FiUpload } from "react-icons/fi";
 import { AuthContext } from '../../contexts/auth'
 import { useContext, useState } from "react";
 import firebase from "../../services/firebaseConnection";
-import { nativeTouchData } from "react-dom/cjs/react-dom-test-utils.development";
 import { toast } from "react-toastify";
 
 export default function Profile() {
@@ -117,9 +116,9 @@ export default function Profile() {
 
                             <input type="file" accept="image/*" onChange={handleFile} />
                             {avatarUrl === null ?
-                                <img src={avatar} width="250" height="250" alt="User profile picture" />
+                                <img src={avatar} width="250" height="250" alt="User profile" />
                                 :
-                                <img src={avatarUrl} width="250" height="250" alt="User profile picture" />
+                                <img src={avatarUrl} width="250" height="250" alt="User profile" />
                             }
                         </label>
 

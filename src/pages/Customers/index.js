@@ -17,21 +17,21 @@ export default function Customers() {
 
         if (nomeFantasia !== '' && cnpj !== '' && endereco !== '') {
             await firebase.firestore().collection('customers')
-            .add({
-                nomeFantasia: nomeFantasia,
-                cnpj: cnpj,
-                endereco: endereco
-            })
-            .then(() => {
-                setNomeFantasia('');
-                setCnpj('');
-                setEndereco('');
-                toast.success('Company registered successfully!');
-            })
-            .catch((error) => {
-                console.log(error);
-                toast.error('Something went wrong');
-            });
+                .add({
+                    nomeFantasia: nomeFantasia,
+                    cnpj: cnpj,
+                    endereco: endereco
+                })
+                .then(() => {
+                    setNomeFantasia('');
+                    setCnpj('');
+                    setEndereco('');
+                    toast.success('Company registered successfully!');
+                })
+                .catch((error) => {
+                    console.log(error);
+                    toast.error('Something went wrong');
+                });
         } else {
             toast.error('Not all fields are valid');
         }
@@ -50,10 +50,10 @@ export default function Customers() {
                     <form className="form-profile customers" onSubmit={handleAdd}>
                         <label>Name</label>
                         <input type="text" value={nomeFantasia} placeholder="Company name" onChange={(e) => setNomeFantasia(e.target.value)} />
-                    
+
                         <label>CNPJ</label>
                         <input type="text" value={cnpj} placeholder="CNPJ" onChange={(e) => setCnpj(e.target.value)} />
-                        
+
                         <label>Address</label>
                         <input type="text" value={endereco} placeholder="Address" onChange={(e) => setEndereco(e.target.value)} />
 
