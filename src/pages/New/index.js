@@ -3,6 +3,7 @@ import { AuthContext } from '../../contexts/auth';
 import Header from "../../components/Header";
 import Title from "../../components/Title";
 import firebase from '../../services/firebaseConnection';
+import { toast } from 'react-toastify';
 
 import { FiPlus } from "react-icons/fi";
 import './new.css';
@@ -13,7 +14,7 @@ export default function New() {
   const [clienteSelecionado, setClienteSelecionado] = useState(0);
   const [tipo, setTipo] = useState('IT');
   const [status, setStatus] = useState('Open');
-  const [description, setDescription] = useState('');
+  const [descricao, setDescricao] = useState('');
 
   const { user } = useContext(AuthContext);
 
@@ -51,8 +52,28 @@ export default function New() {
     loadCustomers();
   }, []);
 
-  function handleRegister(e) {
+  async function handleRegister(e) {
     e.preventDefault();
+
+    await firebase.firestore().collection('tickets')
+      .add({
+        created: new Date(),
+        customer: clientes[clienteSelecionado].nomeFantasia,
+        customerId: clientes[clienteSelecionado].id,
+        type: tipo,
+        status: status,
+        description: descricao,
+        ticketCallerId: user.uid
+      })
+      .then(() => {
+        toast.success('Ticket created!');
+        setDescricao('');
+        setClienteSelecionado(0);
+      })
+      .catch((error) => {
+        toast.error('Something went wrong...');
+        console.log(error);
+      });
   }
 
   function handleChangeSelect(e) {
@@ -114,7 +135,7 @@ export default function New() {
             </div>
 
             <label>Description</label>
-            <textarea type="text" placeholder="Optional description about your issue" value={description} onChange={(e) => setDescription(e.target.value)} />
+            <textarea type="text" placeholder="Optional descricao about your issue" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
 
             <button type="submit">Register</button>
           </form>

@@ -13,7 +13,7 @@
 
 .new {
   float: right;
-  margin-bottom: 1.5em;
+  margin-bottom: .9em;
   background-color: #83BF02;
   color: #FFF;
   border: 0;
@@ -34,6 +34,17 @@
 .new:hover {
   background-color: #5FD204;
   transform: scale(1.1);
+}
+
+.btn-more {
+  margin: 1.5em 0;
+  padding: .5em 1em;
+  height: 35px;
+  border: 0;
+  border-radius: 7px;
+  background-color: #181C2E;
+  color: #FFF;
+  font-size: 1.1em;
 }
 
 table {
