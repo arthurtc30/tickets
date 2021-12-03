@@ -29,7 +29,7 @@ export default function Customers() {
                     toast.success('Company registered successfully!');
                 })
                 .catch((error) => {
-                    console.log(error);
+                    // console.log(error);
                     toast.error('Something went wrong');
                 });
         } else {

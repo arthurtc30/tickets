@@ -63,12 +63,12 @@ export default function Profile() {
                     storageUser(data);
                 })
                 .catch((error) => {
-                    console.log(error);
+                    // console.log(error);
                 });
             });
         })
         .catch((error) => {
-            console.log(error);
+            // console.log(error);
         });
     }
 
@@ -91,7 +91,7 @@ export default function Profile() {
                 storageUser(data);
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
             });
         } else if (nome !== '' && imageAvatar !== null) {
             handleUpload();

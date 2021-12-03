@@ -58,7 +58,7 @@ export default function Dashboard() {
                     updateState(snapshot);
                 })
                 .catch((error) => {
-                    console.log(error);
+                    // console.log(error);
                     setLoadingMore(false);
                 });
 

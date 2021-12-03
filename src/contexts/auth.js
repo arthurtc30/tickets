@@ -49,7 +49,7 @@ function AuthProvider({ children }) {
                 toast.success('Welcome back!');
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 setLoadingAuth(false);
                 toast.error('Oops... Something went wrong');
             });
@@ -80,13 +80,13 @@ function AuthProvider({ children }) {
                         toast.success('Welcome!');
                     })
                     .catch((error) => {
-                        console.log(error);
+                        // console.log(error);
                         setLoadingAuth(false);
                         toast.error('Oops... Something went wrong');
                     });
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 setLoadingAuth(false);
             });
     }

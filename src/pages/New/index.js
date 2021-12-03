@@ -38,7 +38,7 @@ export default function New() {
           setIdCustomer(true);
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           setIdCustomer(false);
         });
     }
@@ -56,7 +56,7 @@ export default function New() {
           })
 
           if (lista.length === 0) {
-            console.log("No customer found");
+            // console.log("No customer found");
             setClientes([{ id: 1, nomeFantasia: "" }]);
             setLoadingClientes(false);
             return;
@@ -71,7 +71,7 @@ export default function New() {
 
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           setLoadingClientes(false);
           setClientes([{ id: 1, nomeFantasia: "" }]);
         });
@@ -101,7 +101,7 @@ export default function New() {
           history.push("/dashboard");
         })
         .catch((error) => {
-          console.log(error);
+          // console.log(error);
           toast.error('Something went wrong...');
         });
     } else {
@@ -122,7 +122,7 @@ export default function New() {
         })
         .catch((error) => {
           toast.error("Something went wrong...");
-          console.log(error);
+          // console.log(error);
         });
     }
   }
